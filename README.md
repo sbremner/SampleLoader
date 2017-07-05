@@ -1,4 +1,4 @@
-#Description
+# Description
 This is a test malware sample used to load LSB encoded code from the internet. This specific sample template works with LSB encoded bitmap files to extract a stager payload for meterpreter.
 
 The goal is to demonstrate a means of loading malicious code onto a system
