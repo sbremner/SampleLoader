@@ -55,3 +55,9 @@ Future possibilities:
 
   1. Staged-Encoding - encodes the staged payload to look benign on the wire
   2. Unhooking/remapping binaries
+  
+  ## See Also
+  
+  The following two projects were used in conjuction with this project to facilitate the full POC:
+  1. Hidestrings (https://github.com/sbremner/Hidestrings)
+  2. LSBStego (https://github.com/sbremner/LSBStego)
